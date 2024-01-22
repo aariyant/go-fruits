@@ -47,3 +47,6 @@ func InitDB() {
 	DB = db
 	fmt.Println("Connected to the database")
 }
+
+
+
