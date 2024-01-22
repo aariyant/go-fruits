@@ -12,3 +12,4 @@ RUN    env GOOS=linux GOARCH=$(dpkg-architecture -q DEB_BUILD_ARCH) go build -v 
 EXPOSE 8080
 
 CMD    ["/app/app"]
+
