@@ -1,7 +1,7 @@
 FROM    golang:1.20
 
 WORKDIR /app
-RUN    apt update && apt install -y dpkg-dev
+RUN    apt update && apt install -y dpkg-dev vim
 
 COPY    . .
 
@@ -12,5 +12,3 @@ RUN    env GOOS=linux GOARCH=$(dpkg-architecture -q DEB_BUILD_ARCH) go build -v 
 EXPOSE 8080
 
 CMD    ["/app/app"]
-
-
